@@ -1,0 +1,114 @@
+@variant: "light";
+@transparency: "false";
+
+@base_color: #ffffff;
+@base_color_dark: #222b2e;
+
+@text_color: #1b2224;
+@text_color_dark: #eeeeee;
+@bg_color: #f7f7f7;
+@fg_color: #1b2224;
+
+@selected_fg_color: #ffffff;
+@selected_bg_color: #2eb398;
+@selected_bg_color_lite: #d3e7e3;
+@selected_borders_color: darken(@selected_bg_color, 20%);
+@borders_color: darken(@bg_color, 10%);
+
+@link_color: darken(@selected_bg_color, 10%);
+@link_visited_color: darken(@text_color, 5%);
+
+@selection_mode_bg: @selected_bg_color;
+@selection_mode_fg: @selected_fg_color;
+@warning_color: #f27835;
+@error_color: #fc4138;
+@warning_fg_color: white;
+@error_fg_color: white;
+@success_color: #2eb398;
+@destructive_color: #db5b5b;
+@suggested_color: #db5b5b;
+@destructive_fg_color: white;
+@suggested_fg_color: white;
+
+@progress_color: #db5b5b;
+
+@drop_target_color: #f08437;
+
+@insensitive_fg_color: fade(@fg_color, 55%);
+@insensitive_bg_color: mix(@bg_color, @base_color, 40%);
+@header_bg: @base_color;
+@header_bg_backdrop: lighten(@header_bg, 3%);
+@header_border: darken(@header_bg, 7%);
+@header_fg: saturate(transparentize(@selected_fg_color, 0.2), 10%);
+
+@dark_sidebar_bg: #303b3e;
+@dark_sidebar_fg: #eeeeee;
+@dark_sidebar_border: @dark_sidebar_bg;
+
+@osd_fg_color: @text_color;
+@osd_bg_color: fade(#eeeeee, 95%);
+
+@osd_button_bg: transparentize(lighten(@osd_bg_color, 22%), 0.6);
+@osd_button_border: transparentize(darken(@osd_bg_color, 12%), 0.6);
+
+@osd_entry_bg: transparentize(lighten(@osd_bg_color, 22%), 0.6);
+@osd_entry_border: transparentize(darken(@osd_bg_color, 12%), 0.6);
+
+@osd_insensitive_bg_color: darken(@osd_bg_color, 3%);
+@osd_insensitive_fg_color: mix(@osd_fg_color, fadein(@osd_bg_color, 100%), 30%);
+@osd_borders_color: @osd_button_border;
+
+@panel_bg: darken(@dark_sidebar_bg, 4.7%);
+@panel_fg: @dark_sidebar_fg;
+
+@entry_bg: @base_color;
+@entry_border: #cfd6e6;
+
+@header_entry_bg: fade(lighten(@header_bg, 22%), 40%);
+@header_entry_border: fade(darken(@header_bg, 12%), 40%);
+
+@button_bg: lighten(@bg_color, 2%);
+@button_border: @entry_border;
+
+@header_button_bg: transparentize(@button_bg, 0.1);
+@header_button_border: transparentize(@header_bg, 0.7);
+
+//WM Buttons
+@wm_button_close_bg: #f46067;
+@wm_button_close_hover_bg: #f68086;
+@wm_button_close_active_bg: #f13039;
+@wm_icon_close_bg: #f8f8f9;
+@wm_button_hover_bg: #fdfdfd;
+@wm_button_active_bg: @selected_bg_color;
+@wm_button_hover_border: #d1dada;
+@wm_icon_bg: #909e9b;
+@wm_icon_unfocused_bg: #b6c0be;
+@wm_icon_hover_bg: #7a8b88;
+@wm_icon_active_bg: @selected_fg_color;
+
+@header: #1b2224;
+@btn_hover_bg: #2c383b;
+@btn_fg: #cccccc;
+@sidebar_hover_color: #4c5558;
+@sidebar_icon_color: #a2a7a8;
+@search_border_color: #171c1e;
+@search_border_color_focus: #2a9c85;
+@search_bg: #eee;
+@search_icon: #d3d5d5;
+
+@list_entry_bg: @bg_color;
+@list_entry_bg_unread: @bg_color;
+@list_entry_hover: #ececec;
+@list_entry_focused: @entry_border;
+@list_entry_focused_text: @text_color;
+@list_border: #d1d1d1;
+@text_color_very_subtle: #7d8182;
+@text_color_subtle: #4c5153;
+
+@message_background: @base_color;
+@message_border: @list_border;
+
+@composer_custom_background: @base_color;
+@composer_custom_focus_border: @list_border;
+@composer_custom_focus_bg: @bg_color;
+@composer_custom_border: @list_border;

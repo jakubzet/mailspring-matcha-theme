@@ -1,0 +1,22 @@
+//====================================================
+//  Sidebar activity
+//====================================================
+
+.sidebar-activity {
+  & .item {
+    & .sync-activity {
+      & .account {
+        & .folder-progress {
+          &::before {
+            background-color: @selected_bg_color;
+          }
+          &.busy {
+            &::before {
+              border: solid 2px @selected_bg_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

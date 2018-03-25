@@ -1,0 +1,134 @@
+//====================================================
+//  Account sidebar
+//====================================================
+.account-sidebar {
+  background-color: @dark_sidebar_bg;
+}
+
+.nylas-outline-view {
+  & .heading {
+    padding: 10px 21px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: @sidebar_icon_color;
+  }
+
+  & .item-container {
+    position: relative;
+    margin-bottom: 2px;
+    &:hover .item {
+      &:not(.selected) {
+        background-color: @sidebar_hover_color;
+      }
+      box-shadow: inset 3px 0 lighten(@selected_bg_color, 10%);
+    }
+  }
+
+  & .item {
+    color: @dark_sidebar_fg;
+    padding: 2px 21px 3px;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 100ms;
+
+    &.selected {
+      background: @selected_bg_color;
+      color: @selected_fg_color;
+
+      // Icon selected
+      & img.content-mask {
+        background-color: @selected_fg_color;
+      }
+
+      // Items count selected
+      & .item-count-box {
+        color: @selected_bg_color;
+        background: @selected_fg_color;
+        &.alt-count {
+          color: @selected_bg_color;
+          background: @selected_fg_color;
+        }
+      }
+    }
+
+    // Icon
+    & img.content-mask {
+      background-color: @sidebar_icon_color;
+    }
+
+    // Items count
+    & .item-count-box {
+      background: darken(@sidebar_icon_color, 20%);
+      color: @dark_sidebar_bg;
+      box-shadow: none;
+      transition: all 100ms;
+      &.alt-count {
+        background: @selected_bg_color;
+        color: @dark_sidebar_bg;
+      }
+    }
+  }
+
+  & section.item-children {
+    padding-left: 0px;
+
+    & .item {
+      padding-left: 33px;
+    }
+  }
+}
+
+// Down arrow icon
+.account-switcher {
+  height: 18px;
+  width: 18px;
+  top: 8px;
+  transition: opacity 200ms;
+  border: solid 1px @selected_fg_color;
+  border-radius: 50%;
+  padding: 2px 3px;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
+  & img {
+    vertical-align: top;
+    margin-top: 4px;
+    zoom: 1 !important;
+    transition: background-color 200ms;
+    max-width: 10px;
+    max-height: 6px;
+    transform: none;
+    background-image: none;
+    background-color: @selected_fg_color;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="#FFF" d="M0 0h1l4 4 4-4h1v1L5 6 0 1z"/></svg>');
+  }
+}
+
+// Item expansion icon wrapper
+.disclosure-triangle {
+  padding: 0;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 31px;
+  background: none;
+  z-index: 1;
+  &:hover > div {
+    opacity: 1;
+  }
+
+  & > div {
+    border: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path fill="#FFF" d="M0 0h1l4 4 4-4h1v1L5 6 0 1z"/></svg>');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 10px;
+    height: 6px;
+    margin-top: 13px;
+    opacity: 0.3;
+    transition: opacity 200ms;
+  }
+}

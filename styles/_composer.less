@@ -1,0 +1,118 @@
+//====================================================
+//  Composer
+//====================================================
+
+.tokenizing-field .content-container {
+  border: solid 1px @entry_border;
+  box-shadow: none;
+}
+
+.composer-full-window .composer-inner-wrap .composer-action-bar-wrap {
+  box-shadow: none;
+  border-radius: 0px;
+  border-top: solid 1px @list_border;
+  background: @composer_custom_focus_bg;
+}
+
+.composer-inner-wrap {
+  & .composer-centered {
+    padding-top: 0px;
+  }
+  & .composer-subject {
+    padding-bottom: 4px;
+    &:after {
+      background: @list_border;
+    }
+  }
+  & .RichEditor-toolbar .inner {
+    border-bottom: solid 1px transparent;
+  }
+  & .compose-body {
+    padding-top: 6px;
+  }
+}
+
+#message-list {
+  & .messages-wrap {
+    & .scroll-region-content-inner {
+      padding: 10px 20px 0px;
+    }
+  }
+  & .footer-reply-area-wrap {
+    border-top: none;
+    box-shadow: none;
+    border-radius: 0px 0px 2px 2px;
+    border: solid 1px @composer_custom_border;
+    background: @composer_custom_background;
+    transition: all 100ms;
+    &:hover {
+      background: @composer_custom_focus_bg;
+    }
+  }
+  & .message-item-wrap {
+    padding-bottom: 20px;
+    &.collapsed {
+      & .message-item-white-wrap {
+        background: @composer_custom_background;
+        border: solid 1px @composer_custom_border;
+      }
+    }
+    & .message-item-white-wrap {
+      border: solid 1px @composer_custom_border;
+      border-radius: 2px;
+      transition: background 100ms;
+      background: @composer_custom_background;
+      // Quick reply composer
+      &.composer-outer-wrap,
+      &.composer-outer-wrap.focused {
+        border: solid 1px @composer_custom_border;
+        background: @composer_custom_background;
+        transition: all 100ms;
+        border-radius: 2px;
+        // Action bar below composer
+        & .composer-action-bar-wrap {
+          box-shadow: none;
+          border-top: solid 1px @composer_custom_border;
+          border-radius: 0px;
+          background: @composer_custom_focus_bg;
+          transition: all 100ms;
+        }
+        // Editor icons
+        & .RichEditor-toolbar {
+          & .inner {
+            background: none;
+          }
+        }
+        // Signature icon
+        &
+          .composer-participant-field
+          .dropdown-component
+          .signature-button-dropdown
+          .only-item {
+          background: none;
+        }
+        // When cursor is active
+        &.focused {
+          background: @composer_custom_focus_bg;
+          border-color: @composer_custom_focus_border;
+          box-shadow: none;
+          & .composer-action-bar-wrap {
+            background: @composer_custom_focus_bg;
+            border-color: @composer_custom_focus_border;
+          }
+          & .composer-participant-field:after {
+            background: @composer_custom_focus_border;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Composer fields
+.composer-participant-field {
+  &:after {
+    transition: background 100ms;
+    background: @composer_custom_border;
+  }
+}

@@ -1,0 +1,34 @@
+//====================================================
+//  Send-out window
+//====================================================
+
+// FIXME
+// Add button mixin
+// Address button
+.tokenizing-field .token.selected,
+.tokenizing-field .token.dragging {
+  background: @selected_bg_color;
+  border: solid 1px @selected_bg_color;
+  box-shadow: none;
+}
+
+.button-dropdown.btn-emphasis {
+  background: transparent;
+}
+
+// Send button
+.button-dropdown.btn-emphasis .primary-item,
+.button-dropdown.btn-emphasis .secondary-picker,
+.button-dropdown.btn-emphasis .only-item {
+  background: @selected_bg_color;
+  border: solid 1px @selected_bg_color;
+  border-right: 0;
+  //border: none;
+  &:active {
+    background: @selected_bg_color;
+  }
+}
+
+.button-dropdown.btn-emphasis .secondary-picker {
+  border-right: solid 1px @selected_bg_color;
+}

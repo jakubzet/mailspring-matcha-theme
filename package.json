@@ -1,0 +1,13 @@
+{
+  "name": "mailspring-theme-matcha",
+  "title": "Matcha Mailspring Theme",
+  "displayName": "Matcha",
+  "theme": "ui",
+  "version": "0.1.0",
+  "description": "Custom adaptation of Matcha GTK Theme for Mailspring.",
+  "license": "MIT",
+  "engines": {
+    "mailspring": "*"
+  },
+  "private": true
+}

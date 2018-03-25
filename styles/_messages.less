@@ -1,0 +1,42 @@
+//====================================================
+//  Messages list
+//====================================================
+
+.column-MessageList {
+  background: @message_background;
+  border-left: solid 1px @message_border;
+}
+
+#message-list {
+  background: transparent;
+
+  & .message-subject-wrap {
+    padding: 0px 0px 4px;
+  }
+
+  & .message-item-wrap {
+    & .message-item-white-wrap {
+      box-shadow: none;
+    }
+  }
+
+  & .message-header {
+    padding-top: 25px;
+  }
+
+  & .message-item-area {
+    padding: 0 25px 14px 25px;
+  }
+}
+
+// Reply icon
+.thread-list .thread-icon.thread-icon-replied,
+.draft-list .thread-icon.thread-icon-replied {
+  opacity: 0.3;
+}
+
+// Attachment icon
+.thread-list .thread-icon.thread-icon-attachment,
+.draft-list .thread-icon.thread-icon-attachment {
+  opacity: 0.3;
+}
