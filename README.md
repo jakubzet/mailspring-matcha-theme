@@ -5,6 +5,7 @@ The original Matcha theme is work of Vince - check his awesome piece of work in 
 
 ## Todo
 Currently the theme is perfectly usable. However, for the 100% effect, there are few additional tweaks to be done:
+- [x] Add base Matcha colors, components style and feeling
 - [ ] Add different color versions
 - [ ] Add dark background version
 - [ ] Add screenshot
