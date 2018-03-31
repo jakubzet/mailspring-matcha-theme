@@ -1,0 +1,257 @@
+//------------------------------------------------------------
+// Main window buttons
+//------------------------------------------------------------
+// Fix for toolbar icons right alignment
+.toolbar-MessageList {
+  width: auto !important;
+  right: 0;
+  height: 0;
+}
+
+.sheet-toolbar .message-toolbar-items {
+  position: absolute !important;
+  right: 112px;
+  z-index: 2;
+}
+
+.toolbar-menu-control {
+  height: 38px;
+}
+
+.toolbar-MessageListSidebar {
+  width: auto !important;
+  left: auto !important;
+  right: 0;
+  .item-spacer {
+    display: none;
+  }
+}
+
+.toolbar-window-controls {
+  width: 102px;
+  margin-left: 13px;
+  z-index: 1;
+}
+
+// Toolbar styling
+body.platform-linux {
+  .toolbar-window-controls {
+    button {
+      width: 16px;
+      height: 16px;
+      margin: 2px 7px 4px;
+      background-size: 16px 16px;
+      background-position: 0 0 !important;
+      transition: all 100ms linear;
+      transform-origin: 50% 50%;
+      &:hover {
+        transform: scale(1.375);
+      }
+    }
+
+    .close {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-dark.png");
+      margin-left: 4px;
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-hover-dark.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-active-dark.png");
+      }
+    }
+
+    .minimize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-dark.png");
+      // Same margin as original Matcha GTK3 apps
+      margin: 2px 13px 4px;
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-hover-dark.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-active-dark.png");
+      }
+    }
+
+    .maximize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-dark.png");
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-hover-dark.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-active-dark.png");
+      }
+    }
+  }
+
+  // Inactive main window
+  &.is-blurred {
+    .toolbar-window-controls {
+      .close {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-backdrop-dark.png");
+      }
+
+      .minimize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-backdrop-dark.png");
+      }
+
+      .maximize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-backdrop-dark.png");
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------
+// Preferences window buttons
+//------------------------------------------------------------
+body.platform-linux {
+  .sheet-toolbar-container[data-id="Preferences"] .toolbar-window-controls {
+    .close {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close.png");
+      margin-left: 4px;
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-active.png");
+      }
+    }
+
+    .minimize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize.png");
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-active.png");
+      }
+    }
+
+    .maximize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize.png");
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-active.png");
+      }
+    }
+  }
+
+  // Inactive composer window
+  &.is-blurred {
+    .sheet-toolbar-container[data-id="Preferences"] .toolbar-window-controls {
+      .close {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-backdrop.png");
+      }
+
+      .minimize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-backdrop.png");
+      }
+
+      .maximize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-backdrop.png");
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------
+// Composer window buttons
+//------------------------------------------------------------
+body.platform-linux {
+  .layout-mode-popout .sheet-toolbar {
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+  }
+  .layout-mode-popout .toolbar-window-controls {
+    .close {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close.png");
+      margin-left: 4px;
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-active.png");
+      }
+    }
+
+    .minimize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize.png");
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-active.png");
+      }
+    }
+
+    .maximize {
+      background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize.png");
+
+      &:hover {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-hover.png");
+      }
+
+      &:active {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-active.png");
+      }
+    }
+  }
+
+  // Inactive composer window
+  &.is-blurred {
+    .layout-mode-popout .toolbar-window-controls {
+      .close {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-backdrop.png");
+      }
+
+      .minimize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-minimize-backdrop.png");
+      }
+
+      .maximize {
+        background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-maximize-backdrop.png");
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------
+// Theme selector close button
+//------------------------------------------------------------
+.modal-container .modal .modal-close {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 8px;
+  content: url(mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close.png);
+
+  &:hover {
+    content: url(mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-hover.png);
+  }
+
+  &:active {
+    content: url(mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-active.png);
+  }
+
+  .platform-linux.is-blurred & {
+    content: url(mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close-backdrop.png);
+  }
+}

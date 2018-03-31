@@ -1,0 +1,97 @@
+//====================================================
+//  ThreadList
+//====================================================
+
+.list-tabular .list-tabular-item {
+  border-left: 0px;
+  padding-left: 4px;
+}
+
+// FIXME
+// Blur styles override (could be done better)
+body.is-blurred {
+  & .list-container {
+    & .list-item {
+      &.focused {
+        background: @list_entry_focused;
+        color: @list_entry_focused_text;
+        border-bottom-color: @list_entry_focused;
+      }
+    }
+  }
+}
+
+.thread-list .focused .thread-icon,
+.draft-list .focused .thread-icon,
+.thread-list .focused .draft-icon,
+.draft-list .focused .draft-icon,
+.thread-list .focused .mail-important-icon,
+.draft-list .focused .mail-important-icon {
+  -webkit-filter: none;
+}
+
+.thread-list .thread-icon {
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 16px;
+  -webkit-mask-position: center;
+  &.thread-icon-unread {
+    background-image: none;
+    background-color: @selected_bg_color;
+    -webkit-mask-image: url(../static/images/thread-list/icon-unread-@2x.png);
+  }
+}
+
+.thread-list,
+.draft-list .unread:not(.focused):not(.selected) .thread-list,
+.draft-list {
+  & .list-item {
+    background: @list_entry_bg;
+    transition: all 100ms;
+    & .btn {
+      transition: background-color 200ms;
+      box-shadow: none;
+      mix-blend-mode: darken;
+      opacity: 0.8;
+    }
+    &:hover {
+      background: @list_entry_hover;
+      & .list-column-HoverActions .inner .btn {
+        background-color: transparent;
+        &:hover {
+          background-color: fade(black, 50%);
+        }
+      }
+    }
+    &.focused {
+      background: @list_entry_focused;
+      color: @list_entry_focused_text;
+      border-bottom-color: @list_border;
+      &:hover .list-column-HoverActions .inner {
+        background-image: -webkit-linear-gradient(
+          left,
+          transparent 0%,
+          @list_entry_focused 50%,
+          @list_entry_focused 100%
+        );
+        & .btn {
+          //box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.5),
+          //  0 -0.5px 0 rgba(0, 0, 0, 0.5), 0.5px 0 0 rgba(0, 0, 0, 0.5),
+          //  -0.5px 0 0 rgba(0, 0, 0, 0.5), 0 0.5px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: none;
+          background-color: transparent;
+          -webkit-filter: none;
+          &:hover {
+            background-color: fade(black, 10%) !important;
+          }
+        }
+      }
+    }
+  }
+  & .unread:not(.focused):not(.selected) {
+    background: @list_entry_bg_unread;
+    transition: all 100ms;
+    &:hover {
+      background: @list_entry_hover;
+    }
+  }
+}

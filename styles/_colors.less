@@ -1,3 +1,11 @@
+//====================================================
+//  THEME CONFIGURATION
+//  Uncomment one of three below to select theme
+//====================================================
+@import "_matcha_sea";
+//@import "_matcha_aliz";
+//@import "_matcha_azul";
+
 @variant: "light";
 @transparency: "false";
 
@@ -10,8 +18,7 @@
 @fg_color: #1b2224;
 
 @selected_fg_color: #ffffff;
-@selected_bg_color: #2eb398;
-@selected_bg_color_lite: #d3e7e3;
+
 @selected_borders_color: darken(@selected_bg_color, 20%);
 @borders_color: darken(@bg_color, 10%);
 
@@ -87,6 +94,7 @@
 @wm_icon_active_bg: @selected_fg_color;
 
 @header: #1b2224;
+@header_highlight: rgba(255, 255, 255, 0.13);
 @btn_hover_bg: #2c383b;
 @btn_fg: #cccccc;
 @sidebar_hover_color: #4c5558;
@@ -112,3 +120,17 @@
 @composer_custom_focus_border: @list_border;
 @composer_custom_focus_bg: @bg_color;
 @composer_custom_border: @list_border;
+
+@scrollbar_track_bg: rgba(0, 0, 0, 0);
+@scrollbar_track_bg_active: #fcfcfc;
+@scrollbar_track_bg_active_border: #d2d2d2;
+@scrollbar_track_bg_hover: #a0a3a4;
+@scrollbar_handle_bg: rgba(0, 0, 0, 0.25);
+@scrollbar_handle_bg_hover: #b6b8b9;
+
+@scrollbar_track_bg_dark: rgba(0, 0, 0, 0.096);
+@scrollbar_track_bg_dark_active: #262d30;
+@scrollbar_track_bg_dark_active_border: #262c2f;
+@scrollbar_track_bg_dark_hover: rgba(255, 255, 255, 0.6);
+@scrollbar_handle_bg_dark: rgba(255, 255, 255, 0.41);
+@scrollbar_handle_bg_dark_hover: #ffffff;

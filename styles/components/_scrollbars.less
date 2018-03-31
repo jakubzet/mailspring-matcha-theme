@@ -1,0 +1,100 @@
+//====================================================
+//  Scrollbar Base & Sidebar Scrollbar
+//====================================================
+
+// Slide-in of scrollbar
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-15px);
+  }
+}
+
+// Scroll track and handle
+.scrollbar-track {
+  background: @scrollbar_track_bg;
+  border-left: none;
+  padding: 0px;
+  width: 6px;
+  padding: 3px 1px;
+  &:hover,
+  &:active {
+    background: @scrollbar_track_bg_active;
+    padding: 3px 3px 3px 4px;
+    box-shadow: inset 1px 0px 0px 0px @scrollbar_track_bg_active_border;
+    width: 13px;
+  }
+  &:hover {
+    & .scrollbar-handle {
+      transition: none;
+      background: @scrollbar_track_bg_hover;
+    }
+  }
+
+  & .scrollbar-track-inner {
+    background: transparent;
+  }
+
+  & .scrollbar-handle {
+    background: @scrollbar_handle_bg;
+    border: none !important;
+    cursor: -webkit-grab;
+    transition: background 300ms;
+    &:hover {
+      background: @scrollbar_handle_bg_hover;
+    }
+    & .tooltip .scroll-tooltip {
+      transform-origin: center right;
+      animation: slideInRight 300ms;
+    }
+  }
+
+  &.dragging .scrollbar-handle {
+    background: @selected_bg_color;
+    cursor: -webkit-grabbing;
+  }
+
+  // Account sidebar has negative scrollbar
+  .account-sidebar & {
+    background: @scrollbar_track_bg_dark;
+    &:hover,
+    &:active {
+      background: @scrollbar_track_bg_dark_active;
+      box-shadow: inset 1px 0px 0px 0px @scrollbar_track_bg_dark_active_border;
+    }
+    &:hover {
+      & .scrollbar-handle {
+        background: @scrollbar_track_bg_dark_hover;
+      }
+    }
+    & .scrollbar-handle {
+      background: @scrollbar_handle_bg_dark;
+      &:hover {
+        background: @scrollbar_handle_bg_dark_hover;
+      }
+    }
+  }
+}
+
+// Tooltip with date on scroll
+.scroll-tooltip {
+  background: @selected_bg_color;
+  color: @base_color;
+  box-shadow: none;
+  border-radius: 2px;
+  border: solid 1px @selected_bg_color;
+  &:before {
+    border-left-color: transparent;
+  }
+  &:after {
+    border-left-color: @selected_bg_color;
+  }
+}
+
+.flexbox-handle-horizontal div {
+  box-shadow: none;
+}

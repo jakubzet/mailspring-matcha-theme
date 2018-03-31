@@ -1,0 +1,57 @@
+//====================================================
+//  Contact details sidebar
+//====================================================
+.column-MessageListSidebar {
+  //background: @list_entry_bg;
+  //border-left: solid 1px @list_border;
+  //padding: 5px 0px;
+}
+
+// Contact sidebar
+.sidebar-section {
+  background: none;
+  border: none;
+  margin: 0px;
+}
+
+.sidebar-participant-picker {
+  select {
+    border: solid 1px @list_border;
+    border-radius: 2px;
+    padding: 4px;
+  }
+}
+
+.related-threads {
+  border-top: none;
+
+  & .related-thread {
+    border-top: solid 1px @list_border;
+    transition: background 100ms;
+    &:hover {
+      background: @list_entry_hover;
+    }
+  }
+
+  & .toggle {
+    border-top: solid 1px @list_border;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+}
+
+.sidebar-participant-picker {
+  padding: 10px 10px 35px 10px;
+}
+
+.participant-profile .profile-photo-wrap,
+.company-profile .profile-photo-wrap {
+  box-shadow: none;
+  border: solid 1px @list_border;
+  border-radius: 50%;
+  padding: 2px;
+  & .profile-photo {
+    border-radius: 50%;
+    border: none;
+  }
+}

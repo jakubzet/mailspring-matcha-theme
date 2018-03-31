@@ -1,29 +1,8 @@
-/*
-Include the standard variables from Mailspring's base theme:
-https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variables.less#L37:L40
-*/
 @import "base/ui-variables";
 @import "_colors";
 
-@gray-base: #ffffff;
-@gray-darker: darken(@gray-base, 13.5%);
-@gray-dark: darken(@gray-base, 20%);
-@gray: darken(@gray-base, 33.5%);
-@gray-light: darken(@gray-base, 46.7%);
-@gray-lighter: darken(@gray-base, 92.5%);
-
 @accent-primary: @selected_bg_color;
-@accent-primary-dark: darken(@accent-primary, 10%);
-
-@background-primary: @header_bg;
-@background-off-primary: @background-primary;
-@background-secondary: @background-primary;
-@background-tertiary: @background-primary;
-
-@border-color-primary: lighten(@background-primary, 10%);
-@border-color-secondary: lighten(@background-secondary, 10%);
-@border-color-tertiary: lighten(@background-tertiary, 10%);
-@border-color-divider: @background-primary;
+@accent-primary-dark: @accent-primary;
 
 @text-color: @text_color;
 @text-color-subtle: @text_color_subtle;
@@ -40,8 +19,8 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variable
 @btn-default-bg-color: lighten(@background-primary, 5%);
 @dropdown-default-bg-color: @entry_bg;
 
-@input-bg: @base_color_dark;
-@input-border: @border-color-divider;
+@input-bg: @entry_bg;
+@input-border: @entry_border;
 
 @list-bg: @base_color;
 @list-border: @list_border;

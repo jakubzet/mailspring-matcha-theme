@@ -1,0 +1,22 @@
+.preferences-wrap .container-preference-tabs {
+  color: @base_color;
+  border-bottom: solid 1px #f9f9f9;
+
+  & .preferences-tabs {
+    background: @header;
+    & .item {
+      border-radius: 2px 2px 0 0;
+      transition: background 100ms;
+      &:not(.active) {
+        &:hover {
+          background: @header_highlight;
+        }
+      }
+      &.active {
+        color: @header;
+        box-shadow: none;
+        background: #f9f9f9;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+//====================================================
+//  Top Toolbar
+//====================================================
+.sheet-toolbar {
+  border-bottom: none;
+  box-shadow: none;
+  min-height: 42px;
+  max-height: 42px;
+}
+
+.sheet-toolbar-container {
+  & > * {
+    margin-top: 2px;
+  }
+  &.mode-popout > * {
+    margin-top: 4px;
+  }
+}
+
+body.platform-linux,
+body.platform-linux.is-blurred {
+  & .sheet-toolbar-container {
+    background: @header;
+  }
+}
+
+body.platform-win32 .toolbar-activity,
+body.platform-linux .toolbar-activity {
+  margin-right: 15px;
+}
+
+//====================================================
+//  Top Toolbar Buttons
+//====================================================
+.sheet-toolbar .btn-toolbar {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 2px;
+  transition: all 200ms;
+
+  &.mode-toggle.mode-false {
+    background: @selected_bg_color;
+    transition: all 200ms;
+    & img.content-mask {
+      transition: all 200ms;
+      background-color: @selected_fg_color;
+    }
+  }
+
+  &:hover {
+    background: @btn_hover_bg;
+    & img.content-mask {
+      background-color: @selected_fg_color;
+    }
+  }
+
+  & img.content-mask {
+    transition: all 200ms;
+    background-color: @btn_fg;
+  }
+}

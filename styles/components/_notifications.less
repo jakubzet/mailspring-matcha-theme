@@ -1,0 +1,31 @@
+//====================================================
+//  Notifications
+//====================================================
+.notifications {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.notification {
+  margin: 0px;
+  border-radius: 0px;
+  background: @selected_bg_color;
+
+  &.offline {
+    background: @error_color;
+  }
+
+  & .action {
+    border-radius: 0;
+    transition: background 100ms;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.sidebar-activity {
+  box-shadow: none;
+  background: @selected_bg_color;
+  color: @list_entry_hover;
+}
