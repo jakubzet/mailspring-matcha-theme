@@ -8,20 +8,20 @@ The original Matcha theme is work of Vince - check his awesome piece of work in 
 ## FAQ
 <details>
   <summary>How can I enable aliz/azul color themes?</summary>
-Just edit the /styles/_colors.less file - you should enable one of the three import statements at the top of the file.
+  Just edit the <strong>/styles/_colors.less</strong> file - you should enable one of the three import statements at the top of the file.
 </details>
 
 <details>
   <summary>Can I have window controls buttons on the right-hand side?</summary>
 There's no such option in Mailspring, however I prepared very dirty hack which enables it! :)
-Just edit the /styles/index.less file and uncomment described import statement.
+Just edit the <strong>/styles/index.less</strong> file and uncomment described import statement.
 </details>
 
 <details>
   <summary>Header looks a bit differently than other Matcha GTK3 apps title bars - can it be fixed?</summary>
 Unfortunately Mailspring doesn't have (for now) option to make the main window transparent.
 Therefore header bar cannot use border-radius. If such update appears in future, I'll update the theme.
-If you are using custom window frame, please uncomment import statement in /styles/index.less to have top-border Matcha look (without border-radius though).
+If you are using custom window frame, please uncomment import statement in <strong>/styles/index.less</strong> to have top-border Matcha look (without border-radius though).
 </details>
 
 <details>
