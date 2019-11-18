@@ -26,14 +26,18 @@
 
   & .item {
     color: @dark_sidebar_fg;
-    padding: 2px 21px 3px;
+    padding: 2px 21px;
     position: relative;
     background-color: transparent;
     transition: background-color 100ms;
+    height: 33px;
+    font-size: 15px;
+    line-height: 1;
 
     &.selected {
       background: @selected_bg_color;
       color: @selected_fg_color;
+      height: 34px;
 
       // Icon selected
       & img.content-mask {

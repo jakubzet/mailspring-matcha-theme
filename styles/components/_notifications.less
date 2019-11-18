@@ -10,9 +10,22 @@
   margin: 0px;
   border-radius: 0px;
   background: @selected_bg_color;
+  position: relative;
 
   &.offline {
     background: @error_color;
+  }
+
+  &.highest-priority {
+    &:after {
+      content: "";
+      background: @notification_border_color;
+      bottom: -1px;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   & .action {
