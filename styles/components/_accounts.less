@@ -25,19 +25,19 @@
   }
 
   & .item {
-    color: @dark_sidebar_fg;
+    color: @sidebar_inactive_text;
     padding: 7px 21px 8px;
     position: relative;
     background-color: transparent;
     transition: background-color 100ms;
     height: auto;
     min-height: 24px !important;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1;
 
     &.selected {
       background: @selected_bg_color;
-      color: @selected_fg_color;
+      color: @sidebar_active_text;
 
       // Icon selected
       & img.content-mask {
