@@ -14,6 +14,26 @@
 }
 
 .toolbar-ThreadList {
+  margin-top: 3px;
+  font-size: 16px;
+
+  .thread-search-bar {
+    background: @base_color_dark;
+    border: solid 1px @search_border_color;
+    box-shadow: none;
+    height: 30px;
+    line-height: 28px;
+    margin-top: 5px;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  .suggestions {
+    margin-top: 18px;
+  }
+}
+
+.toolbar-ThreadList {
   & > .item-container {
     flex-direction: column !important;
     align-items: center;
@@ -28,7 +48,7 @@
   }
   & .menu {
     & .header-container {
-      height: 28px;
+      height: 30px;
       & input {
         height: inherit;
         padding-left: 32px;
