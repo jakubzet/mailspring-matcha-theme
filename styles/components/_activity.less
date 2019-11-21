@@ -18,10 +18,19 @@
 .sidebar-activity {
   & .item {
     & .inner {
-      padding-top: 12px;
+      padding-top: 11px;
       padding-bottom: 10px;
       border: none;
       font-weight: 500;
+
+      &.clickable {
+        transition: background 100ms;
+        background: transparent;
+
+        &:hover {
+          background: @notification_button_bg_hover !important;
+        }
+      }
     }
 
     & .sync-activity {
