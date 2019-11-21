@@ -2,17 +2,66 @@
 //  Sidebar activity
 //====================================================
 
+@keyframes border-pulse-alt {
+  0%,
+  100% {
+    opacity: 0;
+    border-color: transparent;
+  }
+
+  50% {
+    opacity: 1;
+    border-color: @notification_border_color;
+  }
+}
+
 .sidebar-activity {
   & .item {
+    & .inner {
+      padding-top: 12px;
+      padding-bottom: 10px;
+      border: none;
+      font-weight: 500;
+    }
+
     & .sync-activity {
+      overflow-y: auto;
+      border-top: solid 1px @notification_border_color;
+
+      & > * {
+        padding: 12px !important;
+      }
+
       & .account {
+        border-bottom: solid 1px @notification_border_color;
+
         & .folder-progress {
+          margin-left: 0;
+          margin-right: 0;
+
           &::before {
             background-color: @selected_bg_color;
           }
+
+          &.complete {
+            &::before {
+              background-color: @notification_border_color;
+            }
+          }
+
           &.busy {
             &::before {
-              border: solid 2px @selected_bg_color;
+              border: solid 2px @notification_border_color;
+              animation: border-pulse-alt 3000ms infinite;
+            }
+
+            & .progress-label {
+              color: @success_color;
+              margin-left: 4px;
+              background: white;
+              padding: 0 7px;
+              border-radius: 3px;
+              border-radius: 2px;
             }
           }
         }

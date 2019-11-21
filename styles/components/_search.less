@@ -2,6 +2,18 @@
 //  Search bar
 //====================================================
 
+@keyframes suggestions {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 // mixin to enable custom image-overlays
 .replace-img-with-base64-svg(@width:40px, @height:40px) {
   height: @height;
@@ -15,7 +27,7 @@
 
 .toolbar-ThreadList {
   margin-top: 3px;
-  font-size: 16px;
+  font-size: 15.5px;
 
   .thread-search-bar {
     background: @base_color_dark;
@@ -30,6 +42,62 @@
 
   .suggestions {
     margin-top: 18px;
+    border: solid 1px @suggestions_border;
+    border-radius: 3px;
+    padding: 14px 10px;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.05);
+    animation: suggestions 100ms ease-in-out 1;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      left: 50%;
+      top: 0;
+      position: absolute;
+    }
+
+    &:before {
+      border-width: 0 11px 12px 11px;
+      margin-left: -12px;
+      margin-top: -12px;
+      border-color: transparent transparent @suggestions_border transparent;
+    }
+
+    &:after {
+      border-width: 0 10px 11px 10px;
+      margin-left: -11px;
+      margin-top: -11px;
+      border-color: transparent transparent @base_color transparent;
+    }
+
+    .suggestion {
+      color: @suggestion_color;
+      border-radius: 2px;
+      padding: 0px 9px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 24px;
+      font-size: 15.5px;
+
+      &:hover:not(.selected) {
+        background: @suggestion_bg_hover;
+      }
+
+      .suggestion-token {
+        font-weight: inherit;
+        color: @suggestion_color;
+      }
+    }
+
+    .footer {
+      margin: 14px -14px -14px;
+      padding: 7px 19px;
+      text-align: center;
+    }
   }
 }
 
