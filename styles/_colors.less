@@ -3,8 +3,8 @@
 //  Uncomment one of three below to select theme
 //====================================================
 @import "_matcha_sea";
-//@import "_matcha_aliz";
-//@import "_matcha_azul";
+// @import "_matcha_aliz";
+// @import "_matcha_azul";
 
 @variant: "light";
 @transparency: "false";
@@ -51,6 +51,9 @@
 @dark_sidebar_bg: #303b3e;
 @dark_sidebar_fg: #eeeeee;
 @dark_sidebar_border: @dark_sidebar_bg;
+
+@sidebar_active_text: #ffffff;
+@sidebar_inactive_text: #c6cdcb;
 
 @osd_fg_color: @text_color;
 @osd_bg_color: fade(#eeeeee, 95%);
@@ -99,10 +102,15 @@
 @btn_fg: #cccccc;
 @sidebar_hover_color: #4c5558;
 @sidebar_icon_color: #a2a7a8;
-@search_border_color: #171c1e;
-@search_border_color_focus: #2a9c85;
-@search_bg: #eee;
-@search_icon: #d3d5d5;
+@search_border_color: #171d1f;
+@search_border_color_focus: @selected_bg_color;
+@search_bg: #242c2e;
+@search_bg_focus: #2a3437;
+@search_icon: @sidebar_inactive_text;
+@search_icon_focus: @selected_bg_color;
+@search_text_placeholder: @sidebar_inactive_text;
+@search_text_focus: #fcfdfd;
+@search_selected_border_color: #bec1c2;
 
 @list_entry_bg: @bg_color;
 @list_entry_bg_unread: @bg_color;
@@ -134,3 +142,14 @@
 @scrollbar_track_bg_dark_hover: rgba(255, 255, 255, 0.6);
 @scrollbar_handle_bg_dark: rgba(255, 255, 255, 0.41);
 @scrollbar_handle_bg_dark_hover: #ffffff;
+
+@notification_border_color: #99d8cb;
+@notification_button_bg_hover: rgba(255, 255, 255, 0.2);
+
+@toolbar_border_top: #393f40;
+
+@suggestions_bg: #ffffff;
+@suggestion_bg_hover: #ededed;
+@suggestions_border: #d9d9d9;
+@suggestion_color: #273134;
+@suggestion_color_inactive: #888e8f;

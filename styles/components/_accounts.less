@@ -25,15 +25,19 @@
   }
 
   & .item {
-    color: @dark_sidebar_fg;
-    padding: 2px 21px 3px;
+    color: @sidebar_inactive_text;
+    padding: 7.5px 21px;
     position: relative;
     background-color: transparent;
     transition: background-color 100ms;
+    height: auto;
+    min-height: 24px !important;
+    font-size: 15.5px;
+    line-height: 1;
 
     &.selected {
       background: @selected_bg_color;
-      color: @selected_fg_color;
+      color: @sidebar_active_text;
 
       // Icon selected
       & img.content-mask {
@@ -51,6 +55,12 @@
       }
     }
 
+    & .name {
+      line-height: 1;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+
     // Icon
     & img.content-mask {
       background-color: @sidebar_icon_color;
@@ -62,6 +72,7 @@
       color: @dark_sidebar_bg;
       box-shadow: none;
       transition: all 100ms;
+      height: 14px;
       &.alt-count {
         background: @selected_bg_color;
         color: @dark_sidebar_bg;
@@ -127,7 +138,7 @@
     background-color: transparent;
     width: 10px;
     height: 6px;
-    margin-top: 13px;
+    margin-top: 14px;
     opacity: 0.3;
     transition: opacity 200ms;
   }

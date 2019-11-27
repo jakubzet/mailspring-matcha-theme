@@ -10,15 +10,36 @@
   margin: 0px;
   border-radius: 0px;
   background: @selected_bg_color;
+  position: relative;
 
   &.offline {
     background: @error_color;
   }
 
+  &.highest-priority {
+    &:after {
+      content: "";
+      background: @notification_border_color;
+      bottom: -3px;
+      transform: translateY(-2px);
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  & .title {
+    padding: 12px;
+  }
+
   & .action {
     border-radius: 0;
+    padding: 9px 12px;
     transition: background 100ms;
+
     &:hover {
+      background: @notification_button_bg_hover;
       box-shadow: none;
     }
   }
