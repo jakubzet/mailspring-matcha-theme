@@ -6,6 +6,34 @@
   box-shadow: none;
   min-height: 44px;
   max-height: 44px;
+
+  .selection-bar {
+    .absolute {
+      background-color: @header;
+      border-left: none;
+      border-right: none;
+      top: -1px;
+
+      .inner {
+        .centered {
+          font-size: 15.5px;
+          color: @sidebar_inactive_text;
+
+          & + .btn-toolbar {
+            background: @selected_bg_color;
+            margin-right: 11px;
+            height: 26px;
+            color: @base_color;
+            transition: background-color 100ms;
+
+            &:hover {
+              background: lighten(@selected_bg_color, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .sheet-toolbar-container {
