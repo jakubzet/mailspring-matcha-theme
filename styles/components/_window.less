@@ -12,6 +12,14 @@
   position: absolute !important;
   right: 112px;
   z-index: 2;
+
+  .layout-mode-list & {
+    right: 216px;
+  }
+
+  .layout-mode-splitVertical & {
+    right: 6px;
+  }
 }
 
 .toolbar-menu-control {
@@ -177,6 +185,7 @@ body.platform-linux {
     min-height: 44px;
     max-height: 44px;
   }
+
   .layout-mode-popout .toolbar-window-controls {
     .close {
       background-image: url("mailspring://mailspring-theme-matcha/assets/@{theme_assets_directory}/titlebutton-close.png");

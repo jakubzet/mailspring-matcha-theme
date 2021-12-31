@@ -190,8 +190,10 @@
 
 .toolbar-ThreadList {
   & > .item-container {
-    flex-direction: column !important;
-    align-items: center;
+    .layout-mode-split & {
+      align-items: center;
+      flex-direction: column !important;
+    }
   }
 }
 

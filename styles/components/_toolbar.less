@@ -7,6 +7,12 @@
   min-height: 44px;
   max-height: 44px;
 
+  .column-ThreadList & {
+    background: @selected_bg_color;
+    min-height: 40px;
+    max-height: 40px;
+  }
+
   .selection-bar {
     .absolute {
       background-color: @header;
@@ -67,10 +73,19 @@ body.platform-linux .toolbar-activity {
   box-shadow: none;
   border-radius: 2px;
   transition: all 200ms;
+  margin-top: 6px;
+
+  .layout-mode-list &,
+  .layout-mode-splitVertical & {
+    &:not(.item-compose) {
+      margin-top: 8px;
+    }
+  }
 
   &.mode-toggle.mode-false {
     background: @selected_bg_color;
     transition: all 200ms;
+
     & img.content-mask {
       transition: all 200ms;
       background-color: @selected_fg_color;
@@ -79,6 +94,7 @@ body.platform-linux .toolbar-activity {
 
   &:hover {
     background: @btn_hover_bg;
+
     & img.content-mask {
       background-color: @selected_fg_color;
     }
@@ -87,5 +103,9 @@ body.platform-linux .toolbar-activity {
   & img.content-mask {
     transition: all 200ms;
     background-color: @btn_fg;
+
+    .layout-mode-splitVertical & {
+      background-color: @selected_fg_color;
+    }
   }
 }
