@@ -44,3 +44,24 @@
 .draft-list .thread-icon.thread-icon-attachment {
   opacity: 0.3;
 }
+
+// Support for Mailspring Avatars plugin (https://github.com/Striffly/mailspring-avatars)
+.thread-avatar {
+  & > * {
+    outline: solid 1px @entry_border;
+    background-color: @entry_bg;
+    transform-origin: center center !important;
+  }
+}
+
+.thread-list .thread-avatar {
+  & > * {
+    transform: scale(0.75) !important;
+  }
+}
+
+.thread-list-narrow .thread-avatar {
+  & > * {
+    transform: scale(1) !important;
+  }
+}
