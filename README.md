@@ -1,3 +1,11 @@
+# MIGRATION NOTE
+
+This repository soon will have different hosting (I don't really like what MS is doing with GitHub):
+https://codeberg.org/jakubzet/mailspring-matcha-theme
+
+I'll remove the GitHub repo soon ;) Cheers!
+
+
 # Mailspring Matcha Theme
 My adaptation of Matcha GTK theme suited for Mailspring.
 
